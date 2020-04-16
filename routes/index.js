@@ -15,7 +15,7 @@ router.get("/browse", (req, res) => {
 router.post("/upload", upload.single("fileUpload"),(req, res) => {
   console.log(req.file)
   if(!req.file){
-    res.render("all images", {error:"you need to upload a file"})
+    res.render("allImages", {error:"you need to upload a file"})
   };
 const data = loadData()
 data.push(req.file)
